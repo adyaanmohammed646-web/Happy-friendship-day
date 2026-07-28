@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nida's Friendship Puzzle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="puzzle-page">
+
+<h1>🧩 Friendship Challenge 🧩</h1>
+
+<p>
+Solve this little puzzle to unlock the next surprise ✨
+</p>
+
+<h2 id="question">
+What is my bestie's name?
+</h2>
+
+<input id="answer" placeholder="Type answer">
+
+<button onclick="checkAnswer()">
+Unlock 🔐
+</button>
+
+<p id="result"></p>
+
+</div>
+
+
+<script>
+
+function checkAnswer(){
+
+let answer = document.getElementById("answer").value;
+
+if(answer.toLowerCase()=="nida"){
+
+document.getElementById("result").innerHTML =
+"Correct! 🎉 You unlocked the secret path ❤️";
+
+setTimeout(function(){
+window.location.href="timeline.html";
+},2000);
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"Try again ✨";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
