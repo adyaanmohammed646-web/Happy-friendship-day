@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nida's Mystery Gift</title>
+<title>Nida's Secret Gift 🎁</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="gift-page">
+<div class="gift-world">
 
-<h1>🎁 A Special Gift For Nida 🎁</h1>
+<h1>🎁 A Secret Gift For Nida 🎁</h1>
 
 <p>
-Something magical is waiting inside...
+Something special is waiting inside...
 </p>
 
-<div class="gift" onclick="openGift()">
+
+<div class="gift-box" onclick="openGift()">
 🎁
 </div>
 
-<p id="giftMessage">
+
+<p id="giftText">
 Tap the gift box ✨
 </p>
 
+
 <button onclick="nextPage()">
-Final Surprise 🌌
+See The Final Universe 🌌
 </button>
+
 
 </div>
 
@@ -34,10 +38,13 @@ Final Surprise 🌌
 
 function openGift(){
 
-document.getElementById("giftMessage").innerHTML =
-"💖 Surprise! 💖<br><br>" +
-"Dear Nida,<br>" +
-"This little universe was created to remind you that true friendship is something special. ✨";
+document.querySelector(".gift-box").innerHTML="💖";
+
+document.getElementById("giftText").innerHTML =
+"✨ Gift Unlocked ✨<br><br>" +
+"Dear Nida,<br><br>" +
+"This is not just a website...<br>" +
+"it's a small universe made with effort, creativity, and friendship. ❤️";
 
 }
 
