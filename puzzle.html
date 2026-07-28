@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nida's Friendship Puzzle</title>
+<title>Friendship Puzzle 🧩</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="puzzle-page">
+<div class="puzzle-game">
 
-<h1>🧩 Friendship Challenge 🧩</h1>
+<h1>🧩 Unlock The Secret</h1>
 
 <p>
-Solve this little puzzle to unlock the next surprise ✨
+Solve the friendship challenge to continue ✨
 </p>
 
+<div class="question-box">
+
 <h2 id="question">
-What is my bestie's name?
+Question 1 🌟
 </h2>
 
-<input id="answer" placeholder="Type answer">
+<p id="quiz">
+Who is the person this universe was made for?
+</p>
 
-<button onclick="checkAnswer()">
-Unlock 🔐
+<button onclick="answer('Nida')">
+Nida 🌸
 </button>
 
+<button onclick="answer('Other')">
+Someone else 😅
+</button>
+
+</div>
+
+
 <p id="result"></p>
+
+
+<button id="next" onclick="nextPage()" style="display:none;">
+Unlock Next Chapter 🔓
+</button>
+
 
 </div>
 
 
 <script>
 
-function checkAnswer(){
+function answer(choice){
 
-let answer = document.getElementById("answer").value;
-
-if(answer.toLowerCase()=="nida"){
+if(choice=="Nida"){
 
 document.getElementById("result").innerHTML =
-"Correct! 🎉 You unlocked the secret path ❤️";
+"Correct! 🎉 You found the secret.";
 
-setTimeout(function(){
-window.location.href="timeline.html";
-},2000);
+document.getElementById("next").style.display="inline-block";
 
 }
 
 else{
 
 document.getElementById("result").innerHTML =
-"Try again ✨";
+"Not this one 😄 Try again.";
 
 }
+
+}
+
+
+function nextPage(){
+
+window.location.href="timeline.html";
 
 }
 
 </script>
+
 
 </body>
 </html>
