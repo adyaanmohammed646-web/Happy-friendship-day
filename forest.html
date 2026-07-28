@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nida's Magic Forest</title>
+<title>Nida's Magic Forest 🌲</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="forest">
+<div class="forest-world">
 
-<h1>🌲 Welcome to the Magic Forest 🌲</h1>
+<h1>🌲 The Magic Forest 🌲</h1>
 
 <p>
-Nida, you have entered a place where every flower holds a memory...
+Welcome Nida... ✨<br>
+Every glowing flower here holds a little surprise.
 </p>
 
-<div class="flowers">
-🌸 🦋 🌸 🦋 🌸
+<div class="fireflies">
+✨ 🦋 ✨ 🦋 ✨
 </div>
 
+<div class="flowers">
+🌸 🌺 🌸 🌺 🌸
+</div>
+
+<button onclick="reveal()">
+Touch the Magic Flower 🌸
+</button>
+
+<p id="secret"></p>
+
 <button onclick="nextPage()">
-Find the Secret Path ✨
+Follow the Moonlight 🌙
 </button>
 
 </div>
 
+
 <script>
-function nextPage(){
-window.location.href="moon.html";
+
+function reveal(){
+
+document.getElementById("secret").innerHTML =
+"💌 Hidden message unlocked:<br><br>" +
+"Some people make ordinary moments feel special. " +
+"Thank you for being a wonderful friend, Nida. ✨";
+
 }
+
+
+function nextPage(){
+
+window.location.href="moon.html";
+
+}
+
 </script>
 
 </body>
