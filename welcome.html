@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome Nida</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="welcome">
+
+<h1 id="typing"></h1>
+
+<button onclick="enter()">
+Enter The Universe 🌌
+</button>
+
+</div>
+
+
+<script>
+
+let text =
+"Among billions of people in this universe... ✨\n\nOne friendship deserved its own little world ❤️";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML += text[i]
+.replace("\n","<br>");
+
+i++;
+
+setTimeout(type,60);
+
+}
+
+}
+
+type();
+
+
+function enter(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
