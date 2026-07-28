@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nida's Moon Message</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="moon-page">
+
+<h1>🌙 The Moon Messenger 🌙</h1>
+
+<div class="moon" onclick="showMessage()">
+🌕
+</div>
+
+<p id="message">
+Tap the moon to reveal a secret message...
+</p>
+
+<button onclick="nextPage()">
+Continue the Journey ⭐
+</button>
+
+</div>
+
+
+<script>
+
+function showMessage(){
+
+document.getElementById("message").innerHTML =
+"Dear Nida ❤️<br><br>" +
+"Some friendships are rare and special. " +
+"I created this little universe to show how much I appreciate our friendship. ✨";
+
+}
+
+
+function nextPage(){
+window.location.href="story.html";
+}
+
+</script>
+
+</body>
+</html>
