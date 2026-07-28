@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nida's Secret Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="intro">
+<h1>✨ A Secret Universe ✨</h1>
+
+<p id="text"></p>
+
+<input type="password" id="password" placeholder="Enter the secret code">
+
+<button onclick="enter()">Enter</button>
+
+<p id="error"></p>
+</div>
+
+<script>
+
+let message = "Some websites are made for everyone... but this one was created for only one person ❤️";
+
+let i = 0;
+
+function typing(){
+ if(i < message.length){
+ document.getElementById("text").innerHTML += message.charAt(i);
+ i++;
+ setTimeout(typing,50);
+ }
+}
+
+typing();
+
+
+function enter(){
+
+let pass = document.getElementById("password").value;
+
+if(pass=="1234"){
+window.location.href="forest.html";
+}
+else{
+document.getElementById("error").innerHTML="Wrong code ✨ Try again";
+}
+
+}
+
+</script>
+
+</body>
+</html>
