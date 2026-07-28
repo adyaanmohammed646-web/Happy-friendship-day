@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nida's Friendship Story</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="book-page">
+
+<h1>📖 Our Friendship Story 📖</h1>
+
+<div class="book">
+
+<h2>Chapter 1 ✨</h2>
+
+<p id="story">
+Every beautiful friendship starts with a small moment...
+</p>
+
+<button onclick="nextStory()">
+Turn Page ➡️
+</button>
+
+</div>
+
+<button onclick="continueJourney()">
+Continue 🌟
+</button>
+
+</div>
+
+
+<script>
+
+let pages = [
+"Every beautiful friendship starts with a small moment...",
+"Then slowly, two people become comfortable sharing laughs, talks, and memories.",
+"True friendship is not about being together every second, but always caring for each other.",
+"And this little website is a small gift from Affan to Nida on Friendship Day ❤️"
+];
+
+let count = 0;
+
+function nextStory(){
+
+count++;
+
+if(count < pages.length){
+document.getElementById("story").innerHTML = pages[count];
+}
+
+}
+
+function continueJourney(){
+window.location.href="puzzle.html";
+}
+
+</script>
+
+</body>
+</html>
