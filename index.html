@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nida's Secret Universe</title>
+<title>Nida's Universe 🌌</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="stars"></div>
+<div class="universe">
 
-<div class="intro">
-<h1>✨ A Secret Universe ✨</h1>
+<h1 id="title"></h1>
 
-<p id="text"></p>
+<p id="message"></p>
 
-<input type="password" id="password" placeholder="Enter the secret code">
+<div class="door">
+🚪
+</div>
 
-<button onclick="enter()">Enter</button>
+<input id="password" type="password" placeholder="Enter Secret Code">
+
+<button onclick="openUniverse()">
+Enter Universe ✨
+</button>
 
 <p id="error"></p>
+
 </div>
+
 
 <script>
 
-let message = "Some websites are made for everyone... but this one was created for only one person ❤️";
+let title = "✨ Welcome To Nida's Universe ✨";
+
+let message =
+"Among billions of stars in this universe... 🌌\n" +
+"one friendship deserved its own little world ❤️";
+
 
 let i = 0;
 
 function typing(){
- if(i < message.length){
- document.getElementById("text").innerHTML += message.charAt(i);
- i++;
- setTimeout(typing,50);
- }
+
+if(i < title.length){
+
+document.getElementById("title").innerHTML += title[i];
+
+i++;
+
+setTimeout(typing,80);
+
+}
+
 }
 
 typing();
 
 
-function enter(){
+setTimeout(function(){
 
-let pass = document.getElementById("password").value;
+document.getElementById("message").innerHTML =
+message.replace("\n","<br>");
+
+},2000);
+
+
+
+function openUniverse(){
+
+let pass =
+document.getElementById("password").value;
+
 
 if(pass=="1234"){
+
 window.location.href="forest.html";
+
 }
+
 else{
-document.getElementById("error").innerHTML="Wrong code ✨ Try again";
+
+document.getElementById("error").innerHTML =
+"Wrong secret code ✨";
+
 }
 
 }
